@@ -2,8 +2,8 @@ package com.mihut.mediakotlin.di
 
 import android.app.Application
 import androidx.room.Room
-import com.mihut.mediakotlin.movieList.data.local.movie.MovieDatabase
-import com.mihut.mediakotlin.movieList.data.remote.MovieApi
+import com.mihut.mediakotlin.services.data.local.movie.MovieDatabase
+import com.mihut.mediakotlin.services.data.remote.MovieApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

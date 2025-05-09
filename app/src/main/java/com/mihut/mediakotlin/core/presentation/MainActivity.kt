@@ -16,7 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.mihut.mediakotlin.core.presentation.details.DetailsScreen
-import com.mihut.mediakotlin.movieList.util.Screen
+import com.mihut.mediakotlin.services.util.Screen
 import com.mihut.mediakotlin.ui.theme.MediaKotlinTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint

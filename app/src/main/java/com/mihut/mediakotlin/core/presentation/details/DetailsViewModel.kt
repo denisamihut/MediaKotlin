@@ -3,8 +3,8 @@ package com.mihut.mediakotlin.core.presentation.details
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mihut.mediakotlin.movieList.domain.repository.MovieListRepository
-import com.mihut.mediakotlin.movieList.util.Resource
+import com.mihut.mediakotlin.services.domain.repository.MovieListRepository
+import com.mihut.mediakotlin.services.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

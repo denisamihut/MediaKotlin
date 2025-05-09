@@ -37,8 +37,8 @@ import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Size
-import com.mihut.mediakotlin.movieList.data.remote.MovieApi
-import com.mihut.mediakotlin.movieList.util.RatingBar
+import com.mihut.mediakotlin.services.data.remote.MovieApi
+import com.mihut.mediakotlin.services.util.RatingBar
 import com.mihut.mediakotlin.R
 
 @Composable

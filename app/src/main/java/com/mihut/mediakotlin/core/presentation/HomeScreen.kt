@@ -33,12 +33,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.mihut.mediakotlin.R
-import com.mihut.mediakotlin.presentasion.MovieListUiEvent
-import com.mihut.mediakotlin.presentasion.MovieListViewModel
-import com.mihut.mediakotlin.presentasion.PopularMoviesScreen
-import com.mihut.mediakotlin.presentasion.UpcomingMoviesScreen
+import com.mihut.mediakotlin.viewModels.MovieListUiEvent
+import com.mihut.mediakotlin.viewModels.MovieListViewModel
+import com.mihut.mediakotlin.viewModels.PopularMoviesScreen
+import com.mihut.mediakotlin.viewModels.UpcomingMoviesScreen
 
-import com.mihut.mediakotlin.movieList.util.Screen
+import com.mihut.mediakotlin.services.util.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
