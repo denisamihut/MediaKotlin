@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -42,7 +43,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation ("androidx.compose.material3:material3")
+    implementation ("androidx.compose.material:material:1.5.4")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -75,6 +77,9 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
+    // Timber
+    implementation ("com.jakewharton.timber:timber:5.0.1")
+
     // Coil
     implementation(libs.coil.compose)
     // Extended Icons
@@ -82,5 +87,12 @@ dependencies {
     // System UI Controller
     implementation(libs.accompanist.systemuicontroller)
 
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    // Youtube Player
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.1")
 }
+
+
+
 

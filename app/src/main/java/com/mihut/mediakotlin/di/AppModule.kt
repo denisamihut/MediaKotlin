@@ -2,8 +2,6 @@ package com.mihut.mediakotlin.di
 
 import android.app.Application
 import androidx.room.Room
-import com.mihut.mediakotlin.services.data.local.movie.MovieDatabase
-import com.mihut.mediakotlin.services.data.remote.MovieApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,11 +11,16 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import com.mihut.mediakotlin.main.data.local.genres.GenresDatabase
+import com.mihut.mediakotlin.main.data.local.media.MediaDatabase
+import com.mihut.mediakotlin.main.data.remote.api.GenresApi
+import com.mihut.mediakotlin.main.data.remote.api.MediaApi
+import com.mihut.mediakotlin.main.data.remote.api.MediaApi.Companion.BASE_URL
+import com.mihut.mediakotlin.media_details.data.remote.api.ExtraDetailsApi
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
-
+class AppModule {
     private val interceptor: HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
@@ -28,23 +31,54 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesMovieApi() : MovieApi {
-        return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(MovieApi.BASE_URL)
-            .client(client)
-            .build()
-            .create(MovieApi::class.java)
+    fun provideGenreDatabase(app: Application): GenresDatabase {
+        return Room.databaseBuilder(
+            app,
+            GenresDatabase::class.java,
+            "genresdb.db"
+        ).build()
     }
 
     @Provides
     @Singleton
-    fun providesMovieDatabase(app: Application): MovieDatabase {
+    fun provideMediaDatabase(app: Application): MediaDatabase {
         return Room.databaseBuilder(
             app,
-            MovieDatabase::class.java,
-            "moviedb.db"
+            MediaDatabase::class.java,
+            "mediadb.db"
         ).build()
     }
 
+    @Singleton
+    @Provides
+    fun provideMoviesApi() : MediaApi {
+        return Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .client(client)
+            .build()
+            .create(MediaApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGenresApi() : GenresApi {
+        return Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .client(client)
+            .build()
+            .create(GenresApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideExtraDetailsApi() : ExtraDetailsApi {
+        return Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .client(client)
+            .build()
+            .create(ExtraDetailsApi::class.java)
+    }
 }
