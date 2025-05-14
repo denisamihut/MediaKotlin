@@ -9,7 +9,6 @@ fun genresProvider(
     allGenres: List<Genre>
 ): String {
 
-
     var genres = ""
 
     for (i in allGenres.indices) {
@@ -22,16 +21,3 @@ fun genresProvider(
 
     return genres.dropLastWhile { it == ' ' || it == '-' }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,5 @@
 package com.mihut.mediakotlin.util.ui_shared_components
 
-
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
@@ -26,6 +25,7 @@ import com.mihut.mediakotlin.main.presentation.home.MediaHomeScreenSection
 import com.mihut.mediakotlin.ui.theme.font
 import com.mihut.mediakotlin.ui.theme.Radius
 import com.mihut.mediakotlin.util.Constants
+
 @Composable
 fun ShouldShowMediaHomeScreenSectionOrShimmer(
     type: String,

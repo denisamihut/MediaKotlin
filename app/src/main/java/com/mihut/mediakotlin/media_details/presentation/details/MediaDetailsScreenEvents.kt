@@ -3,7 +3,6 @@ package com.mihut.mediakotlin.media_details.presentation.details
 import com.mihut.mediakotlin.main.domain.models.Genre
 
 sealed class MediaDetailsScreenEvents {
-
     data class SetDataAndLoad(
         val moviesGenresList: List<Genre>,
         val tvGenresList: List<Genre>,
@@ -13,6 +12,5 @@ sealed class MediaDetailsScreenEvents {
     ) : MediaDetailsScreenEvents()
 
     object Refresh : MediaDetailsScreenEvents()
-
     object NavigateToWatchVideo : MediaDetailsScreenEvents()
 }

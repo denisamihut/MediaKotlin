@@ -1,9 +1,8 @@
 package com.mihut.mediakotlin.search.data.repository
 
-import android.provider.SyncStateContract.Constants
 import com.mihut.mediakotlin.main.data.mappers.toMedia
 import com.mihut.mediakotlin.main.data.remote.api.MediaApi
-import com.mihut.mediakotlin.main.util.Resource
+import com.mihut.mediakotlin.util.Resource
 import com.mihut.mediakotlin.search.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -11,7 +10,8 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
-import android.provider.MediaStore.Audio.Media
+import com.mihut.mediakotlin.main.domain.models.Media
+import com.mihut.mediakotlin.util.Constants
 
 @Singleton
 class SearchRepositoryImpl @Inject constructor(
@@ -48,7 +48,6 @@ class SearchRepositoryImpl @Inject constructor(
             }
 
             emit(Resource.Success(remoteMediaList))
-
             emit(Resource.Loading(false))
         }
     }

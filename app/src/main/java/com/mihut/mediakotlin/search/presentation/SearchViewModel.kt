@@ -2,9 +2,6 @@ package com.mihut.mediakotlin.search.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mihut.mediakotlin.main.domain.repository.MediaRepository
-import com.mihut.mediakotlin.util.Resource
-import com.mihut.mediakotlin.search.domain.repository.SearchRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -13,6 +10,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.mihut.mediakotlin.main.domain.repository.MediaRepository
+import com.mihut.mediakotlin.search.domain.repository.SearchRepository
+import com.mihut.mediakotlin.util.Resource
+import com.mihut.mediakotlin.main.data.remote.api.MediaApi.Companion.API_KEY
+import com.mihut.mediakotlin.main.domain.models.Media
 
 @HiltViewModel
 class SearchViewModel @Inject constructor(
@@ -72,7 +74,7 @@ class SearchViewModel @Inject constructor(
                     fetchFromRemote = true,
                     query = searchScreenState.value.searchQuery,
                     page = searchScreenState.value.searchPage,
-                    apiKey = "58fdc03902fbde528d391a1fd8a0870b"
+                    apiKey = API_KEY
                 )
                 .collect { result ->
                     when (result) {
@@ -83,7 +85,6 @@ class SearchViewModel @Inject constructor(
                                         searchList = searchScreenState.value.searchList + mediaList
                                     )
                                 }
-
                             }
                         }
 

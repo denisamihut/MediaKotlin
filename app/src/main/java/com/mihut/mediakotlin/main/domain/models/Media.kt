@@ -1,8 +1,9 @@
 package com.mihut.mediakotlin.main.domain.models
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
 
-@Parlize
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+
 data class Media(
     val adult: Boolean,
     val backdropPath: String,
@@ -25,4 +26,4 @@ data class Media(
     var tagline: String?,
     val videos: List<String>?,
     var similarMediaList: List<Int>,
-) : Parcelablece
+)

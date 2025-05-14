@@ -2,7 +2,7 @@ package com.mihut.mediakotlin.media_details.domain.repository
 
 import com.mihut.mediakotlin.main.domain.models.Media
 import com.mihut.mediakotlin.media_details.domain.models.Cast
-import com.mihut.mediakotlin.ui.util.Resource
+import com.mihut.mediakotlin.util.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface ExtraDetailsRepository {

@@ -13,10 +13,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-//import androidx.compose.material.ExperimentalMaterialApi
-//import androidx.compose.material.pullrefresh.PullRefreshIndicator
-//import androidx.compose.material.pullrefresh.pullRefresh
-//import androidx.compose.material.pullrefresh.rememberPullRefreshState
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,18 +42,20 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.mediakotlin.R
-
 import com.mihut.mediakotlin.main.presentation.main.MainUiEvents
 import com.mihut.mediakotlin.main.presentation.main.MainUiState
 import com.mihut.mediakotlin.ui.theme.MediumRadius
 import com.mihut.mediakotlin.ui.theme.BigRadius
 import com.mihut.mediakotlin.ui.theme.font
-import com.mihut.mediakotlin.ui.util.Constants
-import com.mihut.mediakotlin.ui.util.Constants.recommendedListScreen
-import com.mihut.mediakotlin.ui.util.Constants.topRatedAllListScreen
-import com.mihut.mediakotlin.ui.util.Constants.trendingAllListScreen
-import com.mihut.mediakotlin.ui.util.Constants.tvSeriesScreen
-
+import com.mihut.mediakotlin.util.Constants
+import com.mihut.mediakotlin.util.Constants.recommendedListScreen
+import com.mihut.mediakotlin.util.Constants.topRatedAllListScreen
+import com.mihut.mediakotlin.util.Constants.trendingAllListScreen
+import com.mihut.mediakotlin.util.Constants.tvSeriesScreen
+import com.mihut.mediakotlin.util.ui_shared_components.AutoSwipeSection
+import com.mihut.mediakotlin.util.ui_shared_components.NonFocusedTopBar
+import com.mihut.mediakotlin.util.ui_shared_components.shimmerEffect
+import com.mihut.mediakotlin.util.ui_shared_components.ShouldShowMediaHomeScreenSectionOrShimmer
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
@@ -100,7 +102,6 @@ fun MediaHomeScreen(
     }
 
     val refreshState = rememberPullRefreshState(refreshing, ::refresh)
-
 
     Box(
         modifier = Modifier
@@ -202,5 +203,4 @@ fun MediaHomeScreen(
         toolbarOffsetHeightPx = toolbarOffsetHeightPx.floatValue.roundToInt(),
         navController = navController,
     )
-
 }

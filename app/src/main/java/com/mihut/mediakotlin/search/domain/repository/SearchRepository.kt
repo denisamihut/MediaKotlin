@@ -1,7 +1,8 @@
 package com.mihut.mediakotlin.search.domain.repository
 
-import android.provider.MediaStore.Audio.Media
-import com.mihut.mediakotlin.main.util.Resource
+
+import com.mihut.mediakotlin.main.domain.models.Media
+import com.mihut.mediakotlin.util.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface SearchRepository {

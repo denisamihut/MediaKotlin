@@ -48,5 +48,4 @@ fun AutoSwipeSection(
                 .fillMaxWidth(0.9f)
         )
     }
-
 }

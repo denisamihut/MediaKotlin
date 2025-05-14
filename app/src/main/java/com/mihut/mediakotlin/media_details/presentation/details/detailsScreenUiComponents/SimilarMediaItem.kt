@@ -66,9 +66,7 @@ fun SimilarMediaItem(
 ) {
 
     val imageUrl = "${MediaApi.IMAGE_BASE_URL}${media.posterPath}"
-
     val title = media.title
-
     val imagePainter = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
             .data(imageUrl)
@@ -76,7 +74,6 @@ fun SimilarMediaItem(
             .build()
     )
     val imageState = imagePainter.state
-
     val defaultDominantColor = MaterialTheme.colorScheme.primaryContainer
     var dominantColor by remember {
         mutableStateOf(defaultDominantColor)
@@ -120,7 +117,6 @@ fun SimilarMediaItem(
 
                     val imageBitmap = imageState.result.drawable.toBitmap()
 
-
                     dominantColor = getAverageColor(imageBitmap.asImageBitmap())
 
                     Image(
@@ -132,7 +128,6 @@ fun SimilarMediaItem(
                             .clip(RoundedCornerShape(Radius.dp))
                             .background(MaterialTheme.colorScheme.background),
                     )
-
                 }
 
                 if (imageState is AsyncImagePainter.State.Error) {
@@ -149,7 +144,6 @@ fun SimilarMediaItem(
                         tint = MaterialTheme.colorScheme.onBackground
                     )
                 }
-
 
                 if (imageState is AsyncImagePainter.State.Loading) {
                     CircularProgressIndicator(
@@ -253,7 +247,6 @@ fun SimilarMediaItem(
                         color = Color.LightGray
                     )
                 }
-
             }
         }
     }

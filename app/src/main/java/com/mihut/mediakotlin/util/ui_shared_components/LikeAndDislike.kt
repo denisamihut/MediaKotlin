@@ -60,7 +60,6 @@ fun LikeAndDislike(
             contentDescription = stringResource(R.string.like),
             tint = Color.White
         )
-
     }
 }
 

@@ -4,7 +4,6 @@ import com.mihut.mediakotlin.main.data.local.media.MediaDatabase
 import com.mihut.mediakotlin.main.data.mappers.toMedia
 import com.mihut.mediakotlin.media_details.data.remote.api.ExtraDetailsApi
 import com.mihut.mediakotlin.media_details.domain.repository.DetailsRepository
-import com.mihut.mediakotlin.ui.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -13,7 +12,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import com.mihut.mediakotlin.main.domain.models.Media
 import com.mihut.mediakotlin.media_details.data.remote.dto.details.DetailsDto
-import com.mihut.mediakotlin.ui.util.Constants
+import com.mihut.mediakotlin.util.Constants
+import com.mihut.mediakotlin.util.Resource
 
 @Singleton
 class DetailsRepositoryImpl @Inject constructor(

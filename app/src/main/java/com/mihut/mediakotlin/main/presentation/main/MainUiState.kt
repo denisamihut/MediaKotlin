@@ -1,7 +1,8 @@
 package com.mihut.mediakotlin.main.presentation.main
 
-import android.provider.MediaStore.Audio.Media
+
 import com.mihut.mediakotlin.main.domain.models.Genre
+import com.mihut.mediakotlin.main.domain.models.Media
 
 data class MainUiState(
 

@@ -1,6 +1,7 @@
 package com.mihut.mediakotlin.search.presentation
 
-import android.provider.MediaStore.Audio.Media
+import com.mihut.mediakotlin.main.domain.models.Media
+
 
 sealed class SearchUiEvents {
     data class Refresh(val type: String) : SearchUiEvents()

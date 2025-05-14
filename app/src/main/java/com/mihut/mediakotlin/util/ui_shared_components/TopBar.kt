@@ -16,7 +16,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-
 import androidx.compose.material3.Icon
 import com.example.mediakotlin.R
 import com.mihut.mediakotlin.search.presentation.SearchScreenState

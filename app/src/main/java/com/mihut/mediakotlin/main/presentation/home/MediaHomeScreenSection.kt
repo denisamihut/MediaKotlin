@@ -24,9 +24,8 @@ import com.mihut.mediakotlin.util.ui_shared_components.Item
 import com.example.mediakotlin.R
 import com.mihut.mediakotlin.main.presentation.main.MainUiState
 import com.mihut.mediakotlin.ui.theme.font
-import com.mihut.mediakotlin.ui.util.BottomNavRoute
-import com.mihut.mediakotlin.ui.util.Constants
-//import com.mihut.mediakotlin.ui.util.ui_shared_components.Item
+import com.mihut.mediakotlin.util.BottomNavRoute
+import com.mihut.mediakotlin.util.Constants
 
 @Composable
 fun MediaHomeScreenSection(

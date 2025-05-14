@@ -26,6 +26,7 @@ import kotlin.math.roundToInt
 import com.mihut.mediakotlin.ui.theme.BigRadius
 import com.mihut.mediakotlin.util.ui_shared_components.FocusedTopBar
 import com.mihut.mediakotlin.util.Constants
+
 @Composable
 fun SearchScreen(
     navController: NavController,
@@ -34,7 +35,6 @@ fun SearchScreen(
 
     val searchViewModel = hiltViewModel<SearchViewModel>()
     val searchScreenState = searchViewModel.searchScreenState.collectAsState().value
-
     val toolbarHeightPx = with(LocalDensity.current) { BigRadius.dp.roundToPx().toFloat() }
     val toolbarOffsetHeightPx = remember { mutableFloatStateOf(0f) }
     val nestedScrollConnection = remember {
@@ -80,6 +80,5 @@ fun SearchScreen(
         ) {
             searchViewModel.onEvent(SearchUiEvents.OnSearchQueryChanged(it))
         }
-
     }
 }

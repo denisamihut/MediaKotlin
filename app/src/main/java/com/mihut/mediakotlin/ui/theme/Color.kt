@@ -2,7 +2,6 @@ package com.mihut.mediakotlin.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-
 val md_theme_light_primary = Color(0xFFCC9700)
 val md_theme_light_onPrimary = Color(0xFFFFFFFF)
 val md_theme_light_primaryContainer = Color(0xFFFFDF9E)
@@ -66,8 +65,7 @@ val md_theme_dark_surfaceTint = Color(0xFFFABD00)
 val md_theme_dark_outlineVariant = Color(0xFF4D4639)
 val md_theme_dark_scrim = Color(0xFF000000)
 
-
-val seed = Color(0xFFFFFFC107)
+val seed = Color(0xFFFABD00)
 val FFFFC107 = Color(0xFF1ECA78)
 val light_FFFFC107 = Color(0xFF006D3D)
 val light_onFFFFC107 = Color(0xFFFFFFFF)
@@ -77,6 +75,5 @@ val dark_FFFFC107 = Color(0xFF43E18C)
 val dark_onFFFFC107 = Color(0xFF00391D)
 val dark_FFFFC107Container = Color(0xFF00522D)
 val dark_onFFFFC107Container = Color(0xFF65FEA6)
-
 
 val yellow = Color(0xFFf4cb45)

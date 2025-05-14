@@ -237,7 +237,6 @@ fun VideoSection(
                 tint = Color.Black,
                 modifier = Modifier.size(35.dp)
             )
-
         }
     }
 }
@@ -387,7 +386,6 @@ fun InfoSection(
     }
 }
 
-
 @Composable
 fun OverviewSection(
     media: Media
@@ -425,7 +423,6 @@ fun OverviewSection(
             color = MaterialTheme.colorScheme.onSurface,
             lineHeight = 16.sp
         )
-
     }
 }
 

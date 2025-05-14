@@ -56,7 +56,6 @@ import com.mihut.mediakotlin.util.Route
 import com.mihut.mediakotlin.util.getAverageColor
 import com.mihut.mediakotlin.ui.theme.font
 
-
 @Composable
 fun MediaItem(
     media: Media,
@@ -121,7 +120,6 @@ fun MediaItem(
 
                     val imageBitmap = imageState.result.drawable.toBitmap()
 
-
                     dominantColor = getAverageColor(imageBitmap.asImageBitmap())
 
                     Image(
@@ -133,7 +131,6 @@ fun MediaItem(
                             .clip(RoundedCornerShape(Radius.dp))
                             .background(MaterialTheme.colorScheme.background),
                     )
-
                 }
 
                 if (imageState is AsyncImagePainter.State.Error) {
@@ -150,7 +147,6 @@ fun MediaItem(
                         tint = MaterialTheme.colorScheme.onBackground
                     )
                 }
-
 
                 if (imageState is AsyncImagePainter.State.Loading) {
                     CircularProgressIndicator(

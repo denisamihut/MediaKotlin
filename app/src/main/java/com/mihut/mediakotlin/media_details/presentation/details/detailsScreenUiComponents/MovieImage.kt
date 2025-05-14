@@ -23,7 +23,6 @@ import com.mihut.mediakotlin.util.getAverageColor
 import com.mihut.mediakotlin.ui.theme.Radius
 import com.mihut.mediakotlin.util.ui_shared_components.shimmerEffect
 
-
 @Composable
 fun MovieImage(
     imageState: AsyncImagePainter.State,
@@ -46,7 +45,6 @@ fun MovieImage(
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
         )
-
     }
 
     if (imageState is AsyncImagePainter.State.Error) {

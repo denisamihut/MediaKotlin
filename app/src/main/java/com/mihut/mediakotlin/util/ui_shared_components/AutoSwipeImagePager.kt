@@ -126,7 +126,6 @@ fun AutoSwipeImagePager(
                                 0
                             )
                         }
-
                     }
                 }
             }
@@ -141,7 +140,6 @@ fun AutoSwipeImagePager(
                 totalDots = mediaList.size,
                 selectedIndex = pagerState.currentPage
             )
-
         }
     }
 }

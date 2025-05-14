@@ -2,9 +2,7 @@ package com.mihut.mediakotlin.main.presentation.main
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-
 import androidx.compose.material3.Icon
-
 import androidx.compose.material3.Text
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.LiveTv
@@ -34,7 +32,6 @@ import com.mihut.mediakotlin.main.presentation.popularAndTvSeries.MediaListScree
 import com.mihut.mediakotlin.util.BottomNavRoute
 import com.mihut.mediakotlin.ui.theme.font
 import com.mihut.mediakotlin.util.Constants
-
 
 data class BottomNavigationItem(
     val title: String,
@@ -177,6 +174,5 @@ fun BottomNavigationScreens(
                 onEvent = onEvent
             )
         }
-
     }
 }

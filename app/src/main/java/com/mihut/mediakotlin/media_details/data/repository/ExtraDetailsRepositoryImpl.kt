@@ -9,8 +9,8 @@ import com.mihut.mediakotlin.main.data.mappers.toMedia
 import com.mihut.mediakotlin.main.data.mappers.toMediaEntity
 import com.mihut.mediakotlin.main.data.remote.dto.MediaDto
 import com.mihut.mediakotlin.main.domain.models.Media
-import com.mihut.mediakotlin.ui.util.Constants
-import com.mihut.mediakotlin.ui.util.Resource
+import com.mihut.mediakotlin.util.Constants
+import com.mihut.mediakotlin.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

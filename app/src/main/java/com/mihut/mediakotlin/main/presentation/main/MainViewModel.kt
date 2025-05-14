@@ -196,7 +196,6 @@ class MainViewModel @Inject constructor(
                         loadNowPlayingMovies(true)
                         loadTopRatedTvSeries(true)
                     }
-
                 }
             }
         }
@@ -293,7 +292,6 @@ class MainViewModel @Inject constructor(
                                         )
                                     }
                                 }
-
                             }
                         }
 
